@@ -1,4 +1,4 @@
-describe('SongQueueView', function() {
+ describe('SongQueueView', function() {
   var view, fakeSongs;
 
   beforeEach(function() {

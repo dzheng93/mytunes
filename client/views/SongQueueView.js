@@ -11,7 +11,17 @@ var SongQueueView = Backbone.View.extend({
     this.collection.on('pop', function() {
       this.render();
     }, this);
+
+    this.collection.on('ended', function() {
+      this.render();
+    }, this);
+
+    this.collection.on('dequeue', function() {
+      this.render();
+    }, this);
   },
+
+
 
   render: function() {
     // SongQueueEntryView.prototype.render.call(this);
