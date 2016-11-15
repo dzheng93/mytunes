@@ -8,6 +8,9 @@ var LibraryEntryView = Backbone.View.extend({
   events: {
     'click': function() {
       this.model.play();
+      // come back to look into enqueue, should not change songs 
+      // if the song is already playing, should just add to queue without playing
+      this.model.enqueue();
     }
   },
 
