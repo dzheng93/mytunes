@@ -6,6 +6,7 @@
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
+    <script src="env/config.js"></script>
 
     <script src="data/data.js"></script>
 
@@ -20,19 +21,50 @@
     <script src="views/SongQueueView.js"></script>
     <script src="views/SongQueueEntryView.js"></script>
     <script src="views/AppView.js"></script>
+<!--     <script>
+    var app = {};
+    var test = [];
+    app.fetch = function() {
+  $.ajax({
+    // This is the url you should use to communicate with the parse API server.
+    url: 'https://api.parse.com/1/classes/songs',
+    type: 'GET',
+    data: '',
+    contentType: 'application/json',
+    success: function (data) {
+      console.log('chatterbox: Messages received');
+      test.push(data);
+    },
+    error: function (data) {
+      // See: https://developer.mozilla.org/en-US/docs/Web/API/console.error
+      console.error('chatterbox: Failed to receive message', data);
+    }
+  });
 
+};
+
+    </script> -->
     <script>
+
       $(function() {
         // set up model objects
-        var library = new Songs(songData);
-        var app = new AppModel({library: library});
+        var library = new Songs();
+        var app, appView;
+        // var library = new Songs();
 
-        // build a view for the top level of the whole app
-        var appView = new AppView({model: app});
+        // // library.reset(<%= @library.to_json %>);
 
-        // put the view onto the screen
-        $('body').append(appView.render());
+        // var app = new AppModel({library: library});
+
+        // // build a view for the top level of the whole app
+        // var appView = new AppView({model: app});
+
+        // // put the view onto the screen
+        // $('body').append(appView.render());
       });
+
+
+
     </script>
   </body>
 </html>
