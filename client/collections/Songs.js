@@ -14,8 +14,8 @@ var Songs = Backbone.Collection.extend({
       // reset: true,
       // async: false,
       success: function(data) {
-        console.log(data);
-        console.log(data.models[0].attributes.results);
+        // console.log(data);
+        // console.log(data.models[0].attributes.results);
         // data: { limit: 10 }
 
         // library.reset(<%= @library.to_json %>);
